@@ -1,1 +1,54 @@
-<alert type="success">hello</alert>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+        aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      <a class="navbar-brand" href="#">Trvlanche</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" placeholder="Email" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Sign in</button>
+      </form>
+    </div>
+    <!--/.navbar-collapse -->
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>
+      <span class="jumbotronText">Trvlanche</span>
+    </h1>
+    <h2>
+      <span class="jumbotronText">Taste the world!</span>
+    </h2>
+    <button id="exploreBtn" class="btn btn-lg btn-primary">Explore</button>
+  </div>
+</div>
+
+<h2>Trending:</h2>
+<div class="restaurants">
+  <div *ngFor="let restaurant of trendingRestaurants" [class.selected]="restaurant === selectedRestaurant" (click)="onSelect(restaurant)">
+    <div class="col-xs-6 col-md-3">
+      <a href="#" class="thumbnail">
+        <!--<span class="badge">{{restaurant.id}}</span> -->
+        <img src="{{restaurant.imageUrl}}" alt="{{restaurant.name}}">
+        <div>{{restaurant.name}}</div>
+        <div>Seattle, WA</div>
+        <img src="http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png" alt="">
+        <div>Reviews: 1022</div>
+      </a>
+    </div>
+  </div>
+</div>
