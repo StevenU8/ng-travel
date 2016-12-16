@@ -41,13 +41,16 @@
 <div class="restaurants">
   <div *ngFor="let restaurant of trendingRestaurants" [class.selected]="restaurant === selectedRestaurant" (click)="onSelect(restaurant)">
     <div class="col-xs-6 col-md-3">
-      <a href="#" class="thumbnail">
+      <a href="{{restaurant.businessUrl}}" class="thumbnail">
         <!--<span class="badge">{{restaurant.id}}</span> -->
         <img src="{{restaurant.imageUrl}}" alt="{{restaurant.name}}">
-        <div>{{restaurant.name}}</div>
+        <hr>
+        <h2>{{restaurant.name}}</h2>
         <div>Seattle, WA</div>
-        <img src="http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png" alt="">
-        <div>Reviews: 1022</div>
+        <div>
+          <img src="http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png" alt="">
+          <span>1022 Reviews</span>
+        </div>
       </a>
     </div>
   </div>
