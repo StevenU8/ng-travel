@@ -6,7 +6,7 @@ import { RESTAURANTS } from './mock-restaurants';
 @Injectable()
 export class RestaurantService {
 
-  getTrendingRestaurants(latitude: number, longitude: number): Promise<Restaurant[]> {
+  getPopularRestaurants(latitude: number, longitude: number): Promise<Restaurant[]> {
     return Promise.resolve(RESTAURANTS);
   }
 }
