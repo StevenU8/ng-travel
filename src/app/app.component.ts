@@ -14,11 +14,11 @@ export class AppComponent {
 
   constructor(private restaurantService: RestaurantService) { }
 
-  getHeroes(): void {
+  getTopRestaurants(): void {
     this.restaurantService.getTrendingRestaurants().then(restaurants => this.trendingRestaurants = restaurants);
   }
 
   ngOnInit(): void {
-    this.getHeroes();
+    this.getTopRestaurants();
   }
 }

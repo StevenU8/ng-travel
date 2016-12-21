@@ -46,10 +46,10 @@
         <img src="{{restaurant.imageUrl}}" alt="{{restaurant.name}}">
         <hr>
         <h2>{{restaurant.name}}</h2>
-        <div>Seattle, WA</div>
+        <div>{{restaurant.location}}</div>
         <div>
-          <img src="http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png" alt="">
-          <span>1022 Reviews</span>
+          <img src="{{restaurant.ratingImgUrl}}" alt="">
+          <span>({{restaurant.reviewCount}} Reviews)</span>
         </div>
       </a>
     </div>
