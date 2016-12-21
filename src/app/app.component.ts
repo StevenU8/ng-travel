@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { Restaurant } from './restaurant/restaurant'
 
 import { RestaurantService } from './services/restaurant.service'
@@ -11,14 +11,18 @@ import { RestaurantService } from './services/restaurant.service'
 })
 export class AppComponent {
   trendingRestaurants: Restaurant[];
+  location = { };  
 
   constructor(private restaurantService: RestaurantService) { }
 
-  getTopRestaurants(): void {
-    this.restaurantService.getTrendingRestaurants().then(restaurants => this.trendingRestaurants = restaurants);
+  getTopRestaurants(position): void {
+    this.location = position.coords;
+    this.restaurantService.getTrendingRestaurants(position.coords.latitude, position.coords.longitude).then(restaurants => this.trendingRestaurants = restaurants);
   }
 
   ngOnInit(): void {
-    this.getTopRestaurants();
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(this.getTopRestaurants.bind(this));
+      };
   }
 }
