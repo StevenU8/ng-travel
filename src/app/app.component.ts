@@ -17,7 +17,7 @@ export class AppComponent {
 
   getTopRestaurants(position): void {
     this.location = position.coords;
-    this.restaurantService.getTrendingRestaurants(position.coords.latitude, position.coords.longitude).then(restaurants => this.trendingRestaurants = restaurants);
+    this.restaurantService.getPopularRestaurants(position.coords.latitude, position.coords.longitude).then(restaurants => this.trendingRestaurants = restaurants);
   }
 
   ngOnInit(): void {
