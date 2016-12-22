@@ -41,4 +41,14 @@ export const RESTAURANTS: Restaurant[] = [
         location: "Seattle, WA",
         ratingImgUrl: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png"
     },
+        {
+        businessId: 'restaurant-5', 
+        name: 'Restaurant 5', 
+        imageUrl: 'https://s3-media3.fl.yelpcdn.com/bphoto/4QuySIzlRQi4kGsCOAD80w/258s.jpg',
+        businessUrl: 'https://www.yelp.com/biz/pike-place-chowder-seattle?osq=Restaurants',
+        price: "$$",
+        reviewCount: 1000,
+        location: "Seattle, WA",
+        ratingImgUrl: "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png"
+    },
 ];

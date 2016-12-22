@@ -7,6 +7,6 @@ import { RESTAURANTS } from './mock-restaurants';
 export class RestaurantService {
 
   getPopularRestaurants(latitude: number, longitude: number): Promise<Restaurant[]> {
-    return Promise.resolve(RESTAURANTS);
+    return Promise.resolve(RESTAURANTS.slice(0,4));
   }
 }
