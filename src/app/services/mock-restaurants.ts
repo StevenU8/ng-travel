@@ -1,4 +1,4 @@
-import { Restaurant } from '../restaurant/restaurant';
+import { Restaurant } from '../contracts/restaurant';
 
 export const RESTAURANTS: Restaurant[] = [
     {
