@@ -24,34 +24,4 @@
     <!--/.navbar-collapse -->
   </div>
 </nav>
-
-<div class="jumbotron">
-  <div class="container">
-    <h1>
-      <span class="jumbotronText">Trvlanche</span>
-    </h1>
-    <h2>
-      <span class="jumbotronText">Taste the world!</span>
-    </h2>
-    <button id="exploreBtn" class="btn btn-lg btn-primary">Explore</button>
-  </div>
-</div>
-
-<h2>Popular Nearby:</h2>
-<div class="restaurants">
-  <div *ngFor="let restaurant of trendingRestaurants" [class.selected]="restaurant === selectedRestaurant" (click)="onSelect(restaurant)">
-    <div class="col-xs-12 col-md-3">
-      <a href="{{restaurant.businessUrl}}" class="thumbnail">
-        <!--<span class="badge">{{restaurant.id}}</span> -->
-        <img src="{{restaurant.imageUrl}}" alt="{{restaurant.name}}">
-        <hr>
-        <h2>{{restaurant.name}}</h2>
-        <div>{{restaurant.location}}</div>
-        <div>
-          <img src="{{restaurant.ratingImgUrl}}" alt="">
-          <span>({{restaurant.reviewCount}} Reviews)</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
+<router-outlet></router-outlet>
