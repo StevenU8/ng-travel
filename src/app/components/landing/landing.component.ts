@@ -5,11 +5,11 @@ import { RestaurantService } from '../../services/restaurant.service'
 @Component({
     moduleId: 'module.id',
     selector: 'my-app',
-    templateUrl: 'app/components/dashboard/dashboard.component.html',
-    styleUrls: ['app/components/dashboard/dashboard.component.css']
+    templateUrl: 'app/components/landing/landing.component.html',
+    styleUrls: ['app/components/landing/landing.component.css']
 })
 
-export class DashboardComponent implements OnInit {
+export class LandingComponent implements OnInit {
   trendingRestaurants: Restaurant[];
   location = { };  
 
