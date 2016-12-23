@@ -9,10 +9,12 @@
   </div>
 </div>
 
-<h2>Popular Nearby:</h2>
+<!--<h2>Popular Nearby:</h2>-->
+<div class="popularHeader h1 text-center">Popular Nearby</div>
+
 <div class="restaurants">
   <div *ngFor="let restaurant of trendingRestaurants" [class.selected]="restaurant === selectedRestaurant" (click)="onSelect(restaurant)">
-    <div class="col-xs-12 col-md-3">
+    <div class="thumb col-xs-12 col-md-3">
       <a href="{{restaurant.businessUrl}}" class="thumbnail">
         <!--<span class="badge">{{restaurant.id}}</span> -->
         <img src="{{restaurant.imageUrl}}" alt="{{restaurant.name}}">

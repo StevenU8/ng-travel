@@ -3,6 +3,7 @@
     min-height: 50vh;
     background-position: center;
     background-size: cover;
+    margin: 0;
 }
 
 .jumbotronText { 
@@ -21,4 +22,14 @@
     border-color: black;
     height: 10vh;
     width: 20vw;
+}
+
+.thumb{
+    max-height: 30vh;
+}
+
+.popularHeader{
+    width: 100%;
+    background-color:rgba(101, 100, 101, .7) ;
+    margin: 0;
 }
