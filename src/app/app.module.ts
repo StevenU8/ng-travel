@@ -4,12 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { AgmCoreModule } from 'angular2-google-maps/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
 import { RestaurantService } from './services/restaurant.service'
 
-import { LandingComponent} from './components/landing/landing.component'
+import { LandingComponent } from './components/landing/landing.component'
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
@@ -19,15 +20,20 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     LandingComponent,
     DashboardComponent,
     DashboardComponent
-],
+  ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     AlertModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: ''
+    })
   ],
-  providers: [ RestaurantService ],
+  providers: [RestaurantService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}
