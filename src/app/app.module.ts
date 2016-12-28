@@ -12,6 +12,7 @@ import { RestaurantService } from './services/restaurant.service'
 
 import { LandingComponent } from './components/landing/landing.component'
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { MapComponent } from './components/map/map.component';
 
 
 @NgModule({
@@ -19,8 +20,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     AppComponent,
     LandingComponent,
     DashboardComponent,
-    DashboardComponent
-  ],
+    DashboardComponent,
+    MapComponent
+],
   imports: [
     BrowserModule,
     FormsModule,
@@ -28,12 +30,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     AlertModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: ''
+      apiKey: 'AIzaSyDh-'
     })
   ],
   providers: [RestaurantService],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
-  
-}
+export class AppModule {  }
