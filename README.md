@@ -1,4 +1,6 @@
-# Trvlanche
+# ng-travel
+
+Workspace to apply what I have learned about routing & http in angular2
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1.
 
